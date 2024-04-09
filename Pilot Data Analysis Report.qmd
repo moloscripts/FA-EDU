@@ -1,0 +1,83 @@
+---
+title: "Playful Learning Across The Years 2.0 (PLAY 2.0)"
+subtitle: "Bangladesh Pilot Study Report" 
+author: "Street Child Data Team"
+date: today
+date-format: long
+format: docx
+reference-doc: "word-style-reference-01.docx"
+toc: true
+toc-depth: 3
+toc-location: body
+toc-title: "Table of Contents"
+number-sections: true
+execute: 
+  eval: true
+  echo: false
+  output: true
+  warning: false
+fig-width: 12
+fig-height: 6
+lang: en-GB
+lof: true
+lot: true
+---
+
+```{r}
+source("Scripts/PLAY.Data.R", local = knitr::knit_global())
+```
+
+# Definition of terms
+
+* **Variability** - The degree of how values are spread out in a distribution.
+
+# Abstract
+
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+# Introduction
+
+## Background Information
+
+The LEGO foundation is committed to supporting children holistically, for inclusive outcomes of children. Measurement is key for this achievement. 
+Through support from RTI and NYU Global TIES for children, a PLAY toolkit was developed
+The tools measure how teachers and caregivers support children’s engagement in their learning. PLAY toolkit was used in rural schools in Bangladesh
+
+
+#  Methodology
+## Sample Area
+The pilot data and IRR data collection were both carried out in Ukhia, an Upazila in Cox's Bazar District of Bangladesh.
+
+## Data Analysis 
+The cardinal aim of conducting data analysis across the the PLAY toolkit is to determine presence of common constructs that contribute self-sustained engagement and learning through PLAY across the contexts.^[4]^ Therefore, data analysis approach will employ a procedure that consists of five steps.^[5]^ These are: 
+
+* Descriptive statistics and correlations of items across the constructs.
+* Tests for reliability across all the instruments.
+* Exploratory factor analysis with an aim of understanding the structure of the items regardless of their pre-assigned constructs.
+* Confirmatory factor analysis with an aim of examining optimal statistical model fits/coefficients.
+* Examine the relationships among different instruments. An optional approach that explores relationships among PLAY instruments and their corresponding results.
+
+(RTI International & NYU – Global TIES, 2023)
+
+
+
+# Results
+
+
+
+
+# References
+1. Playful Learning Across the Years (PLAY). (n.d.). Learningthroughplay.com. Retrieved April 3, 2024, from https://learningthroughplay.com/measuring-learning-through-play/playful-learning-across-the-years-play
+
+2. Gary D. Kader & Mike Perry (2007) Variability for Categorical Variables,
+Journal of Statistics Education, 15:2, , DOI: 10.1080/10691898.2007.11889465
+
+3. Johnson, C. W. (n.d.). 1.4 Variability. https://www.uth.tmc.edu/uth_orgs/educ_dev/oser/L1_4.HTM#:~:text=Why%20do%20you%20need%20to,the%20variability%20in%20the%20data.
+
+4. Jukes, M., Betts, K., Dubeck, P., Edwards, L., Nduku, T., Staskowicz, E., Nyu-Ties, J., Yoshikawa, H., Gjicali, K., Kim, S., Mahbub, T., Montagut, M., Moran, C., Uday Patankar, K., Rosenbach, S., Saleh, H., Strouf, K., & Yiran, V. (2022). Playful Learning Across the Years (PLAY) Measurement Toolkit: Full Report Prepared by RTI International: TABLE OF CONTENTS EXECUTIVE SUMMARY 1. https://cms.learningthroughplay.com/media/nlvm4lve/play-toolkit-development-technical-report-1.pdf
+
+5. RTI International & NYU – Global TIES. (2023, February). Developing the ‘Playful Learning Across the Years’ (PLAY) Toolkit: Section 8 Guide to Data Analysis. In https://www.edc.org/playful-learning-across-years-20.
+
+
+# Appendix

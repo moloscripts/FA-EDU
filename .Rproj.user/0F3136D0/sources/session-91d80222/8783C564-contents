@@ -1,0 +1,144 @@
+---
+title: "EOF: Accelerated Learning Programme"
+author: 
+ - Enrolment Data Analysis Report
+ - By the Global Advisory (Data) Team
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+date-format: long
+output:
+  word_document:
+    toc: yes
+    number_sections: true
+    reference_docx: "word-style-reference-01.docx"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r AnalysisScript, message=TRUE, warning=FALSE, include=FALSE, paged.print=FALSE}
+source("Scripts/Enrolment.R", local = knitr::knit_global())
+```
+
+
+# Enrolment data analysis
+
+
+## Enrolment per age group
+The total number of enrolled students was 7710. Out of these, 56% (4,338) were male learners and 44% (3,372) were female learners. Enrolment per lot saw 51% (3,905) of all learners were in Lot 1, and 49%(3,805) of all learners were in lot 2. The highest number of enrolment in Lot 1 was accounted for by male learners in the age group of 8-10, with a total of 1,271, this represented 33% of the enrolment. Second were male learners still in the age group of 8-10 accounting for 27% (1,047) of  the enrolment. The figure below shows the total count of enrolment across learners in Lot 1. Classified per age group and gender. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.align="center", fig.width=8, fig.height=7, fig.cap="Lot 1 Enrolment per age group across sex"}
+Lot1Enrolment
+```
+
+In lot 2, male learners across the age group of 8-10 were the most common learners accounting for 28% (1,056) of all the total learners. This was closely followed by female learners of the same age group accounting for 24% (910). The below graph shows the distribution of learners in Lot 2 across the age groups, per gender. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.align="center", fig.width=8, fig.height=7, fig.cap="Lot 2 Enrolment per age group across sex"}
+Lot2Enrolment
+```
+
+## Enrolment per district
+
+In Lot 1, male learners in Gushegu district were the highest count, accounting for 22% (861) of the total lot. This was closely followed by male learners across Karaga and Mion each having 17%. The graph below illustrates total enrolment in lot 1, across all genders. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.align="center", fig.width=8, fig.height=7, fig.cap="Lot 1: Enrolment across districts per gender"}
+DistrictPerSexLot1
+```
+
+In Lot 2, male learners in Nanumba North were the highest accounting for 21% of the lot. This is followed by Nanumba South and Nanumba North that had an equal proportion of 17% across male and female learners. Below charts illustrates the count and proportion of learners in Lot 2. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.align="center", fig.width=8, fig.height=7, fig.cap="Lot 2: Enrolment across districts per gender"}
+DistrictPerSexLot2
+```
+
+## Enrolment per communities
+In Lot 1, Bolimbo, Gbanlua, Bogu Kambon Naayili, Nalogu, and Kukpaligu were the communities with the highest enrollment of male learners. On the other hand, Kukpaligu, Bolimbo, Gushegu, and Mayefuni had the highest enrollment of female learners. In contrast, Manyini, Bagurugu, Ufin, Yawongdo, and Nakundugu No2 had the lowest enrollment of male learners. Similarly, Gmapoido, Tinsung, Nakundugu No. 1, Nakunga, Limo, and Kanimo had the lowest enrollment of female learners.
+
+
+In Lot 2, the communities of Baduli, Sakpe, Simniboma, Takoradi, and Tinageria had the highest number of male students enrolled. Conversely, the communities of Sakpe, Dalarbdo, Bincheratanga, Dipah, and Kpakpilya had the highest number of female students enrolled. On the other hand, Kakpande, Kpayansi, Juali, Gmabeendo, and Lankani had the lowest number of male learners, while Lepusi, Montanaya, Gmalpedo, and Nyamanyamani were communities with female learners.
+
+## School attendance
+
+95% (7,324) of all students have never attended school, the remaining 5% (386) attended school. General dropout rate per across the two lots and gender saw Lot 1 having the highest dropout rate consisting of 122 male learners. This is 32% percent of all total dropouts across all lots. Secondly was still male learners in lot 2 accounting for 26% (100) of all learners. The table below disaggregates dropout rate across genders in lot 1 and lot 2.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+pander(DropoutPerLotGender)
+```
+
+Furthermore, the district that exhibited the highest dropout rate is Nanumba South, with 73 learners being female learners and 70 being male learners. Top communities within this district that had the highest dropout rates were Nakpayili, Koyaja, and Juali.
+
+Below is a district-wise table showing the rate of dropout across all lots. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+pander(DropoutDist)
+```
+
+Finally, dropout rate across the years saw early dropout in male learners as compared to female learners. From, the graph below, trend in female learner dropout started in 2016 (2) as compared to male learners in 2009 (1). The year with the highest dropout rate was in 2020, that consisted of 71 male learners. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.align="center", fig.width=10, fig.height=4, fig.cap="Rate of dropout per year, across gender"}
+LastYearofEnrolment
+```
+
+## Analysis of lanugage used
+
+Lipkakpaln is the primary language spoken across ALP centers consuming 66% (5,073) of the total learners. Dagbani language had a share percentage of 34% (2,637) of the learners. 
+However, in Lot 1, the main ALP Centre language was Dagbani, accounting for 56% (2,171), while 44% (1,734) of the ALP Centres, the ALP Centre language was Lipkakpaln.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.align="center", fig.width=10, fig.height=6, fig.cap="Main Language across ALP Centres in Lot 1"}
+ALPLot1
+```
+
+Lot 2 saw ALP Centres transition to Lipkakpaln being the main ALP Centre language accounting for 88% (3,339) of the learners and Dagbani accommodating the rest of the proportion, which is 12% (466). Below is the chart per gender showing the Main language across ALP centres language in Lot 2, per gender. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.align="center", fig.width=10, fig.height=6, fig.cap="Main Language across ALP Centres in Lot 2"}
+ALPLot2
+```
+
+The PLAY language used by the learners was Likpakpaln, which accounted for 65% (4990) of all students. Dagbani was second with 34% (2588) of all learners and finally Komba language was spoken by  2% (128) of learners.
+
+In terms of the different lots, the primary language used in Lot 1 was Dagbani, which accounted for 55% (2,146) of all learners. Likpakpaln was the second most common language, accounting for 42% (1,627) of all learners, while Komba represented 3% (128) of all learners. Twi, on the other hand, had a very small presence with only 4 learners. The below chart shows the PLAY language in Lot 1 across all genders.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.align="center", fig.width=10, fig.height=6, fig.cap="LOT 1: PLAY language used across genders"}
+PLAYLot1
+```
+
+Lot 2 saw a tectonic shift in PLAY language used across all learners.  88% (3,363) of all learners used Likpakpaln as the main PLAY language with only 12% (442) using Dagbani as the PLAY language.
+The below chart aggregates these statistics based on the learner's gender. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.align="center", fig.width=10, fig.height=6, fig.cap="LOT 2: PLAY language used across genders"}
+PLAYLot2
+```
+
+
+## Analysis of disability and health insurance
+Out of all learners, only 1% (33) are disabled. Lot 1 has 17 learners with a disability, while lot 2 has 16 learners with a disability.
+The highest form of disability prevalent in Lot 1 was talking and seeing affecting male learners, as seen in the bar graph below
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.align="center", fig.width=10, fig.height=6, fig.cap="LOT 1: Disability type per gender"}
+DisabilityLot1
+```
+
+Highest form of disability present in lot 2 is hearing, seeing and walking, all affecting male learners. Below is a bar graph of disability type per gender across lot 2
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.align="center", fig.width=10, fig.height=6, fig.cap="LOT 2: Disability type per gender"}
+DisabilityLot2
+```
+
+Regarding health insurance, approximately 65% (4,974) of all learners have a health insurance card, while the remaining 35% (2,736) do not possess one. 
+Out of all the learners in lot 1 who lack health insurance, 57% (796) are male, whereas 43% (611) are female. Narrowing down these statistics per district, Gushegu Mion and  Karaga had the highest number of learners without a health insurance. Below is the breakdown of absolute numbers and their corresponding proportions, learners who do not have a valid health insurance across lot 1. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+pander(NoInsuranceDistLot1)
+```
+
+
+With regards to lot 2,  out of all learners who don't have a health insurance, 58% (771) are male and 42% (558) are female. The table below illustrates the districts in which these learners lack health insurance.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+pander(NoInsuranceDistLot2)
+```
+
+## Caregiver analysis
+
+The total number of caregivers was 7,710. There was a significant gender imbalance, as 95% (7,327) of caregivers were male and only 5% (383) were female. The primary occupation among caregivers was predominantly farming, which accounted for 99% (7,649) of all respondents.
+
+
+
