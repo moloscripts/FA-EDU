@@ -24,17 +24,14 @@ lot: true
 ---
 
 ```{r}
-source("Scripts/PLAY.Data.R", local = knitr::knit_global())
+source("Scripts/PLAY.Results.R", local = knitr::knit_global())
 ```
 
-# Definition of terms
-
-* **Variability** - The degree of how values are spread out in a distribution.
 
 # Abstract
+Teacher gives student(s) a chance to try or explore something first before being shown how to use / answer it was the item that was observed more than twice under the construct for support of exploration with at least 
 
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+COX3: Teacher asks open-ended questions or prompts for students to share their opinions or preferences was the item that had schools not observing it. 65schools accounting for 87%.
 
 # Introduction
 
@@ -60,10 +57,30 @@ The cardinal aim of conducting data analysis across the the PLAY toolkit is to d
 
 (RTI International & NYU – Global TIES, 2023)
 
+Software used for data analysis is R statistical computing, which contains packages for descriptive statistics as well as psychometric assessments ^[6]^ 
 
 
 # Results
 
+## Context
+Classroom observation scoring sheet was classified into six constructs based on the adult-child interactions: The constructs/dimensions are:  
+
+* COX: Support from Exploration.
+* COA: Support for Agency.
+* COC: Support for personal and social connection. 
+* COE: Support for emotional climate.
+
+Items under each of these constructs was observed using a 3-point ordinal scale of 0-2. 0 indicated the item was not observed, 1 signified it was observed once, and 2 denoted it was observed twice or more. 
+
+
+## Descriptive statistics
+Observations of items regarding support for Exploration showed a deviation from a normal distribution. However, the item COX6, where the teacher allows students to try or explore something before showing them how to use it, had a distribution close to normal. Additionally, items COX6 and CO2, where the teacher gives hints or suggestions to encourage students, had a median score of 2. the items are ordinal, the median value implies that  at least 50% of all schools observed the two items more than once.  at least half of all schools sampled observed this item more than once. Analysis of kurtosis revealed that COX3, where the teacher asks open-ended questions for students to share their opinions, had a Leptokurtic distribution. This was likely due to the fact that this item was not observed by at least 87% of the schools involved in the pilot. 
+The findings pertaining to agency support demonstrated positive skew under all the items. A swift conclusion drawn from the skewness suggests that the majority of items were not observed. Primary outliers under this construct are COA4: Teachers incorporating student ideas or examples in instruction, and COA3: Students determining the approach or method for completing academic tasks. COA4 was never observed in 99% of piloted schools, while COA3 was never observed in 97% of piloted schools. Items under Support for Personal and Social Connection also had a skewed distribution with COC2: Teacher responds to students' emotional needs being observed more than once by at least 65%(48) of all the schools. Other items exhibited a positive skewness, indicating that a higher percentage of the items were not observed. Finally, descriptive stats from support of emotional climate also had a mixture of both positive and negative skewness. For instance, COE7; The teacher explains a student's actions, intentions, and/or feelings to other students was not observed in at least 97% of all schools. COE6: Teacher is inclusive of children with diverse backgrounds and learning needs through meaningful interactions, such as individualized attention had at least 96% of all schools observing it once. 
+Detailed descriptive statistics of items under all these constructs can be found in the appendix section.
+
+## Factor Analysis
+Factor analysis is a dimensionality reduction technique
+ 
 
 
 
@@ -79,5 +96,14 @@ Journal of Statistics Education, 15:2, , DOI: 10.1080/10691898.2007.11889465
 
 5. RTI International & NYU – Global TIES. (2023, February). Developing the ‘Playful Learning Across the Years’ (PLAY) Toolkit: Section 8 Guide to Data Analysis. In https://www.edc.org/playful-learning-across-years-20.
 
+6. Revelle. (2024, January 1). How To: Use the psych package for Factor Analysis and data reduction. Department of Psychology, Northwestern University. Retrieved April 10, 2024, from https://personality-project.org/r/psych/HowTo/factor.pdf
+
+7. Murray, PhD. (n.d.). Median and Interpolated Median. https://murraylax.org/. Retrieved April 11, 2024, from https://murraylax.org/rtutorials/medians.html
+
 
 # Appendix
+## Descriptive statisitics of all items in each of the constructs.
+```{r}
+FitFlextableToPage(co.pilot.desc.stats)
+```
+
